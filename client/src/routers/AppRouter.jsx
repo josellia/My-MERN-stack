@@ -5,6 +5,7 @@ import {
     Route,
     
   } from "react-router-dom";
+import Layout from '../components/layouts/Layout';
 import AccountPage from '../pages/AccountPage';
 import UsersPage from '../pages/admin/UsersPage';
 import HomePage from '../pages/HomePage';
@@ -16,8 +17,10 @@ import RegisterPage from '../pages/RegisterPage';
   
 
 function AppRouter() {
+    
     return (
         <Router>
+            <Layout>
             <Switch>
                 <Route exact path="/" component={HomePage}/>
                 <Route exact path="/login" component={LoginPage}/>
@@ -28,6 +31,7 @@ function AppRouter() {
                 <Route exact path="/admin/:users" component={UsersPage} />
                 <Route path="*"component={NotFoundPage} /> 
             </Switch>
+            </Layout>
         </Router>
     )
 }
