@@ -5,7 +5,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 function Navigation() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" bg="dark">
-      <Navbar.Brand as={NavLink} to="/">Minhas tarefas</Navbar.Brand>
+      <Navbar.Brand className="ml-5" as={NavLink} to="/">Minhas tarefas</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
